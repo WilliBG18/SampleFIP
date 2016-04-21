@@ -8,13 +8,25 @@ namespace SampleFIP
 {
     public abstract class Portfolio
     {
-        public abstract void AcctBalance(int balance);
+        public abstract int AcctBalance(int balance);
+        public abstract int GetSalary(int salary);
+        public abstract double PercInvest(double percent);
     }
     public class ClientAcct : Portfolio
     {
-        public override void AcctBalance(int balance)
+        public override int AcctBalance(int balance)
         {
+            throw new NotImplementedException();
+        }
 
+        public override int GetSalary(int salary)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double PercInvest(double percent)
+        {
+            throw new NotImplementedException();
         }
     }
 }
