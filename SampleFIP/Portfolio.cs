@@ -11,6 +11,8 @@ namespace SampleFIP
         public abstract int AcctBalance(int balance);
         public abstract int GetSalary(int salary);
         public abstract double PercInvest(int salary, double percent);
+        public abstract double Perc401k(int salary, double percent);
+        public abstract double PercLISA(int salary, double percent);
     }
     public class ClientAcct : Portfolio
     {
@@ -25,6 +27,16 @@ namespace SampleFIP
         }
 
         public override double PercInvest(int salary, double percent)
+        {
+            double amount = salary * percent;
+            return amount;
+        }
+        public override double Perc401k(int salary, double percent)
+        {
+            double amount = salary * percent;
+            return amount;
+        }
+        public override double PercLISA(int salary, double percent)
         {
             double amount = salary * percent;
             return amount;
