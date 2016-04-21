@@ -1,0 +1,8 @@
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\bin\Debug\SampleFIP.exe.config
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\bin\Debug\SampleFIP.exe
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\bin\Debug\SampleFIP.pdb
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\obj\Debug\SampleFIP.csprojResolveAssemblyReference.cache
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\obj\Debug\SampleFIP.Properties.Resources.resources
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\obj\Debug\SampleFIP.csproj.GenerateResource.Cache
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\obj\Debug\SampleFIP.exe
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\SampleFIP\obj\Debug\SampleFIP.pdb

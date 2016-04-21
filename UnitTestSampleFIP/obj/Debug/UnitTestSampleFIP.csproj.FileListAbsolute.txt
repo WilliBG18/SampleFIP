@@ -1,0 +1,9 @@
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\bin\Debug\UnitTestSampleFIP.dll
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\bin\Debug\UnitTestSampleFIP.pdb
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\bin\Debug\SampleFIP.exe
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\bin\Debug\SampleFIP.pdb
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\obj\Debug\UnitTestSampleFIP.csprojResolveAssemblyReference.cache
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\obj\Debug\UnitTestSampleFIP.dll
+C:\Users\willi_000\Dropbox\Software Engineering\SampleFIP\UnitTestSampleFIP\obj\Debug\UnitTestSampleFIP.pdb

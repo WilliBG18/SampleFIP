@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleFIP", "SampleFIP\SampleFIP.csproj", "{CC362F98-BFC3-43B8-909F-3347E35993A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestSampleFIP", "UnitTestSampleFIP\UnitTestSampleFIP.csproj", "{4DFBE190-E4ED-49D0-BA84-4EC23A77CE5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC362F98-BFC3-43B8-909F-3347E35993A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC362F98-BFC3-43B8-909F-3347E35993A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC362F98-BFC3-43B8-909F-3347E35993A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC362F98-BFC3-43B8-909F-3347E35993A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DFBE190-E4ED-49D0-BA84-4EC23A77CE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DFBE190-E4ED-49D0-BA84-4EC23A77CE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DFBE190-E4ED-49D0-BA84-4EC23A77CE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DFBE190-E4ED-49D0-BA84-4EC23A77CE5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
