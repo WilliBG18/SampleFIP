@@ -16,17 +16,17 @@ namespace SampleFIP
     {
         public override int AcctBalance(int balance)
         {
-            throw new NotImplementedException();
+            return balance;
         }
 
         public override int GetSalary(int salary)
         {
-            throw new NotImplementedException();
+            return salary;
         }
 
         public override double PercInvest(double percent)
         {
-            throw new NotImplementedException();
+            return percent;
         }
     }
 }
