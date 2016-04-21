@@ -20,5 +20,26 @@ namespace UnitTestSampleFIP
             Assert.AreEqual(.10, clientAcct.PercInvest(.10));
 
         }
+        [TestMethod]
+        public void TestAcctBalance()
+        {
+            Portfolio clientAcct = new ClientAcct();
+            clientAcct.AcctBalance(5000);
+            Assert.AreEqual(5000, clientAcct.AcctBalance(5000));
+        }
+        [TestMethod]
+        public void TestGetSalary()
+        {
+            Portfolio clientAcct = new ClientAcct();
+            clientAcct.GetSalary(50000);
+            Assert.AreEqual(50000, clientAcct.GetSalary(50000));
+        }
+        [TestMethod]
+        public void TestPercInvest()
+        {
+            Portfolio clientAcct = new ClientAcct();
+            clientAcct.PercInvest(.05);
+            Assert.AreEqual(.05, clientAcct.PercInvest(.05));
+        }
     }
 }
