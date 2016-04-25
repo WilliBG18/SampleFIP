@@ -69,7 +69,7 @@ namespace UnitTestSampleFIP
             stkPortfolio.CurrStockVal(250.00);
             stkPortfolio.RandStkVal(.01, .05);
             stkPortfolio.ShowDayChange(250.00, .05, 1);
-            stkPortfolio.ShowTtlChange(162.23, stkPortfolio.ShowDayChange(250.00, .05, 1));
+            stkPortfolio.ShowTtlChange(250.00, stkPortfolio.ShowDayChange(250.00, .05, 1));
             Assert.AreEqual(250.00, stkPortfolio.CurrStockVal(250.00));
             Assert.IsTrue(stkPortfolio.RandStkVal(.01, .05) <= .05);
             Assert.IsTrue(stkPortfolio.RandStkVal(.01, .05) >= .01);
