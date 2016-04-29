@@ -12,6 +12,6 @@ C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\obj\Debug\SampleFIP.pdb
 C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\bin\Debug\SampleFIP.exe
 C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\bin\Debug\SampleFIP.pdb
 C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\obj\Debug\SampleFIP.csprojResolveAssemblyReference.cache
-C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\obj\Debug\SampleFIP.Form1.resources
 C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\obj\Debug\SampleFIP.Properties.Resources.resources
 C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\obj\Debug\SampleFIP.csproj.GenerateResource.Cache
+C:\Users\willi_000\Documents\GitHub\SampleFIP\SampleFIP\obj\Debug\SampleFIP.Invest_Form.resources

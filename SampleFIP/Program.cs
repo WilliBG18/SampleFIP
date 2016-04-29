@@ -16,7 +16,9 @@ namespace SampleFIP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Invest_Form());
+            Invest_Form inv = new Invest_Form();
+            inv.Visible = true;
         }
     }
 }

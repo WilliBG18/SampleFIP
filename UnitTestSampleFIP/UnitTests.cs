@@ -18,8 +18,6 @@ namespace UnitTestSampleFIP
             Assert.AreEqual(1000,  clientAcct.AcctBalance(1000));
             Assert.AreEqual(10000, clientAcct.GetSalary(10000));
             Assert.AreEqual(1000,  clientAcct.PercInvest(10000, .10));
-            Assert.AreEqual(1000,  clientAcct.Perc401k(10000, .10));
-            Assert.AreEqual(1000,  clientAcct.PercLISA(10000, .10));
 
         }
         [TestMethod]
