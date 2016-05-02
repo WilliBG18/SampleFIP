@@ -35,6 +35,8 @@ namespace SampleFIP
             initStkVal_Lbl.Text = initStkVal_Lbl.Text + stkPortfolio.stkVal();
             TtlAmnt_Label.Text = TtlAmnt_Label.Text + getPercAmnt()[0];
             ttlStkVal_Lbl.Text = ttlStkVal_Lbl.Text + stkPortfolio.stkVal();
+            double yearlyCont = getPercAmnt()[2];
+            SavDept_Label.Text = SavDept_Label.Text + yearlyCont;
         }
 
         private double[] getPercAmnt()
@@ -75,6 +77,22 @@ namespace SampleFIP
         private void NxtDay_Btn_Click(object sender, EventArgs e)
         {
             Inv_StkAmnt();
+        }
+        private void LISA()
+        {
+            double SavDept = getPercAmnt()[2];
+            int years = Convert.ToInt32(Years_TB.Text);
+            years = int.Parse(Years_TB.Text);
+            double percReturn = Convert.ToDouble(PercRet_TB.Text);
+            percReturn = double.Parse(PercRet_TB.Text);
+            double finalAmnt = SavDept * Math.Pow((1 + percReturn), years);
+            finalAmnt = Math.Round(finalAmnt, 2);
+            TtlLISA_Label.Text = "Total Amount: " + finalAmnt;
+        }
+
+        private void CalcSavs_Btn_Click(object sender, EventArgs e)
+        {
+            LISA();
         }
     }
 }

@@ -56,9 +56,17 @@
             this.InvAmnt_Label = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.TtlLISA_Label = new System.Windows.Forms.Label();
+            this.PercRet_TB = new System.Windows.Forms.TextBox();
+            this.Years_TB = new System.Windows.Forms.TextBox();
+            this.CalcSavs_Btn = new System.Windows.Forms.Button();
+            this.Years_Label = new System.Windows.Forms.Label();
+            this.PercRet_Label = new System.Windows.Forms.Label();
+            this.SavDept_Label = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -333,6 +341,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.TtlLISA_Label);
+            this.tabPage3.Controls.Add(this.PercRet_TB);
+            this.tabPage3.Controls.Add(this.Years_TB);
+            this.tabPage3.Controls.Add(this.CalcSavs_Btn);
+            this.tabPage3.Controls.Add(this.Years_Label);
+            this.tabPage3.Controls.Add(this.PercRet_Label);
+            this.tabPage3.Controls.Add(this.SavDept_Label);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -340,6 +355,66 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Low Interest S.A.";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // TtlLISA_Label
+            // 
+            this.TtlLISA_Label.AutoSize = true;
+            this.TtlLISA_Label.Location = new System.Drawing.Point(260, 137);
+            this.TtlLISA_Label.Name = "TtlLISA_Label";
+            this.TtlLISA_Label.Size = new System.Drawing.Size(76, 13);
+            this.TtlLISA_Label.TabIndex = 6;
+            this.TtlLISA_Label.Text = "Total Amount: ";
+            // 
+            // PercRet_TB
+            // 
+            this.PercRet_TB.Location = new System.Drawing.Point(351, 43);
+            this.PercRet_TB.Name = "PercRet_TB";
+            this.PercRet_TB.Size = new System.Drawing.Size(100, 20);
+            this.PercRet_TB.TabIndex = 5;
+            // 
+            // Years_TB
+            // 
+            this.Years_TB.Location = new System.Drawing.Point(67, 134);
+            this.Years_TB.Name = "Years_TB";
+            this.Years_TB.Size = new System.Drawing.Size(100, 20);
+            this.Years_TB.TabIndex = 4;
+            // 
+            // CalcSavs_Btn
+            // 
+            this.CalcSavs_Btn.Location = new System.Drawing.Point(328, 246);
+            this.CalcSavs_Btn.Name = "CalcSavs_Btn";
+            this.CalcSavs_Btn.Size = new System.Drawing.Size(100, 23);
+            this.CalcSavs_Btn.TabIndex = 3;
+            this.CalcSavs_Btn.Text = "Calculate Savings";
+            this.CalcSavs_Btn.UseVisualStyleBackColor = true;
+            this.CalcSavs_Btn.Click += new System.EventHandler(this.CalcSavs_Btn_Click);
+            // 
+            // Years_Label
+            // 
+            this.Years_Label.AutoSize = true;
+            this.Years_Label.Location = new System.Drawing.Point(8, 137);
+            this.Years_Label.Name = "Years_Label";
+            this.Years_Label.Size = new System.Drawing.Size(37, 13);
+            this.Years_Label.TabIndex = 2;
+            this.Years_Label.Text = "Years:";
+            // 
+            // PercRet_Label
+            // 
+            this.PercRet_Label.AutoSize = true;
+            this.PercRet_Label.Location = new System.Drawing.Point(260, 46);
+            this.PercRet_Label.Name = "PercRet_Label";
+            this.PercRet_Label.Size = new System.Drawing.Size(85, 13);
+            this.PercRet_Label.TabIndex = 1;
+            this.PercRet_Label.Text = "Percent Return: ";
+            // 
+            // SavDept_Label
+            // 
+            this.SavDept_Label.AutoSize = true;
+            this.SavDept_Label.Location = new System.Drawing.Point(8, 46);
+            this.SavDept_Label.Name = "SavDept_Label";
+            this.SavDept_Label.Size = new System.Drawing.Size(87, 13);
+            this.SavDept_Label.TabIndex = 0;
+            this.SavDept_Label.Text = "Savings Deposit:";
             // 
             // Invest_Form
             // 
@@ -354,6 +429,8 @@
             this.tabPage4.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -388,5 +465,12 @@
         private System.Windows.Forms.Label DayChng_Label;
         private System.Windows.Forms.Label InvAmnt_Label;
         private System.Windows.Forms.Label ttlStkVal_Lbl;
+        private System.Windows.Forms.TextBox PercRet_TB;
+        private System.Windows.Forms.TextBox Years_TB;
+        private System.Windows.Forms.Button CalcSavs_Btn;
+        private System.Windows.Forms.Label Years_Label;
+        private System.Windows.Forms.Label PercRet_Label;
+        private System.Windows.Forms.Label SavDept_Label;
+        private System.Windows.Forms.Label TtlLISA_Label;
     }
 }
