@@ -46,8 +46,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ttlStkVal_Lbl = new System.Windows.Forms.Label();
+            this.initStkVal_Lbl = new System.Windows.Forms.Label();
+            this.stkName_label = new System.Windows.Forms.Label();
             this.TtlAmnt_Label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NxtDay_Btn = new System.Windows.Forms.Button();
             this.TtlChng_Label = new System.Windows.Forms.Label();
             this.DayChng_Label = new System.Windows.Forms.Label();
             this.InvAmnt_Label = new System.Windows.Forms.Label();
@@ -138,6 +141,7 @@
             this.PercLISA_TB.Name = "PercLISA_TB";
             this.PercLISA_TB.Size = new System.Drawing.Size(100, 20);
             this.PercLISA_TB.TabIndex = 41;
+            this.PercLISA_TB.Text = ".1";
             // 
             // label5
             // 
@@ -164,6 +168,7 @@
             this.Perc401k_TB.Name = "Perc401k_TB";
             this.Perc401k_TB.Size = new System.Drawing.Size(100, 20);
             this.Perc401k_TB.TabIndex = 38;
+            this.Perc401k_TB.Text = ".1";
             // 
             // PercIP_TB
             // 
@@ -171,6 +176,7 @@
             this.PercIP_TB.Name = "PercIP_TB";
             this.PercIP_TB.Size = new System.Drawing.Size(100, 20);
             this.PercIP_TB.TabIndex = 37;
+            this.PercIP_TB.Text = ".1";
             // 
             // Salary_TB
             // 
@@ -178,6 +184,7 @@
             this.Salary_TB.Name = "Salary_TB";
             this.Salary_TB.Size = new System.Drawing.Size(100, 20);
             this.Salary_TB.TabIndex = 36;
+            this.Salary_TB.Text = "10000";
             // 
             // AvailBal_TB
             // 
@@ -185,6 +192,7 @@
             this.AvailBal_TB.Name = "AvailBal_TB";
             this.AvailBal_TB.Size = new System.Drawing.Size(100, 20);
             this.AvailBal_TB.TabIndex = 35;
+            this.AvailBal_TB.Text = "1000";
             // 
             // label4
             // 
@@ -224,8 +232,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ttlStkVal_Lbl);
+            this.tabPage1.Controls.Add(this.initStkVal_Lbl);
+            this.tabPage1.Controls.Add(this.stkName_label);
             this.tabPage1.Controls.Add(this.TtlAmnt_Label);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.NxtDay_Btn);
             this.tabPage1.Controls.Add(this.TtlChng_Label);
             this.tabPage1.Controls.Add(this.DayChng_Label);
             this.tabPage1.Controls.Add(this.InvAmnt_Label);
@@ -237,50 +248,77 @@
             this.tabPage1.Text = "Stock Investment";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // ttlStkVal_Lbl
+            // 
+            this.ttlStkVal_Lbl.AutoSize = true;
+            this.ttlStkVal_Lbl.Location = new System.Drawing.Point(347, 79);
+            this.ttlStkVal_Lbl.Name = "ttlStkVal_Lbl";
+            this.ttlStkVal_Lbl.Size = new System.Drawing.Size(65, 13);
+            this.ttlStkVal_Lbl.TabIndex = 13;
+            this.ttlStkVal_Lbl.Text = "Total Stock:";
+            // 
+            // initStkVal_Lbl
+            // 
+            this.initStkVal_Lbl.AutoSize = true;
+            this.initStkVal_Lbl.Location = new System.Drawing.Point(8, 125);
+            this.initStkVal_Lbl.Name = "initStkVal_Lbl";
+            this.initStkVal_Lbl.Size = new System.Drawing.Size(98, 13);
+            this.initStkVal_Lbl.TabIndex = 12;
+            this.initStkVal_Lbl.Text = "Initial Stock Value: ";
+            // 
+            // stkName_label
+            // 
+            this.stkName_label.AutoSize = true;
+            this.stkName_label.Location = new System.Drawing.Point(8, 79);
+            this.stkName_label.Name = "stkName_label";
+            this.stkName_label.Size = new System.Drawing.Size(41, 13);
+            this.stkName_label.TabIndex = 11;
+            this.stkName_label.Text = "Stock: ";
+            // 
             // TtlAmnt_Label
             // 
             this.TtlAmnt_Label.AutoSize = true;
-            this.TtlAmnt_Label.Location = new System.Drawing.Point(236, 120);
+            this.TtlAmnt_Label.Location = new System.Drawing.Point(347, 31);
             this.TtlAmnt_Label.Name = "TtlAmnt_Label";
             this.TtlAmnt_Label.Size = new System.Drawing.Size(76, 13);
-            this.TtlAmnt_Label.TabIndex = 4;
+            this.TtlAmnt_Label.TabIndex = 10;
             this.TtlAmnt_Label.Text = "Total Amount: ";
             // 
-            // button1
+            // NxtDay_Btn
             // 
-            this.button1.Location = new System.Drawing.Point(318, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Next Day";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.NxtDay_Btn.Location = new System.Drawing.Point(350, 246);
+            this.NxtDay_Btn.Name = "NxtDay_Btn";
+            this.NxtDay_Btn.Size = new System.Drawing.Size(75, 23);
+            this.NxtDay_Btn.TabIndex = 9;
+            this.NxtDay_Btn.Text = "Next Day";
+            this.NxtDay_Btn.UseVisualStyleBackColor = true;
+            this.NxtDay_Btn.Click += new System.EventHandler(this.NxtDay_Btn_Click);
             // 
             // TtlChng_Label
             // 
             this.TtlChng_Label.AutoSize = true;
-            this.TtlChng_Label.Location = new System.Drawing.Point(315, 17);
+            this.TtlChng_Label.Location = new System.Drawing.Point(348, 125);
             this.TtlChng_Label.Name = "TtlChng_Label";
             this.TtlChng_Label.Size = new System.Drawing.Size(77, 13);
-            this.TtlChng_Label.TabIndex = 2;
+            this.TtlChng_Label.TabIndex = 8;
             this.TtlChng_Label.Text = "Total Change: ";
             // 
             // DayChng_Label
             // 
             this.DayChng_Label.AutoSize = true;
-            this.DayChng_Label.Location = new System.Drawing.Point(164, 17);
+            this.DayChng_Label.Location = new System.Drawing.Point(193, 125);
             this.DayChng_Label.Name = "DayChng_Label";
             this.DayChng_Label.Size = new System.Drawing.Size(76, 13);
-            this.DayChng_Label.TabIndex = 1;
+            this.DayChng_Label.TabIndex = 7;
             this.DayChng_Label.Text = "Daily Change: ";
             // 
             // InvAmnt_Label
             // 
             this.InvAmnt_Label.AutoSize = true;
-            this.InvAmnt_Label.Location = new System.Drawing.Point(8, 17);
+            this.InvAmnt_Label.Location = new System.Drawing.Point(8, 31);
             this.InvAmnt_Label.Name = "InvAmnt_Label";
             this.InvAmnt_Label.Size = new System.Drawing.Size(62, 13);
-            this.InvAmnt_Label.TabIndex = 0;
+            this.InvAmnt_Label.TabIndex = 6;
             this.InvAmnt_Label.Text = "IP Amount: ";
             // 
             // tabPage2
@@ -326,11 +364,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label TtlChng_Label;
-        private System.Windows.Forms.Label DayChng_Label;
-        private System.Windows.Forms.Label InvAmnt_Label;
-        private System.Windows.Forms.Label TtlAmnt_Label;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button PercAmt_Btn;
         private System.Windows.Forms.Label LISA_Label;
@@ -347,5 +380,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label initStkVal_Lbl;
+        private System.Windows.Forms.Label stkName_label;
+        private System.Windows.Forms.Label TtlAmnt_Label;
+        private System.Windows.Forms.Button NxtDay_Btn;
+        private System.Windows.Forms.Label TtlChng_Label;
+        private System.Windows.Forms.Label DayChng_Label;
+        private System.Windows.Forms.Label InvAmnt_Label;
+        private System.Windows.Forms.Label ttlStkVal_Lbl;
     }
 }

@@ -9,14 +9,19 @@ namespace SampleFIP
     public abstract class StkPortfolio
     {
         public abstract double RandStkVal(double minPerc, double maxPerc);
-        public abstract int    RandVal(int minPerc, int maxPerc);
-        public abstract double[] ShowDayChange(double baseStk, double percChange, int sign);
-        public abstract double[] ShowTtlChange(double baseStk, double[] dayChange);
-        public abstract double CurrStockVal(double stockVal);
+        public abstract int    RandVal();
+        public abstract double[] ShowDayChange(double baseStk);
+        public abstract double[] ShowTtlChange(double baseStk);
+        public abstract string StockName();
+        public abstract double stkVal();
     }
     public class Google : StkPortfolio
     {
+        string stkName = "GOOGL";
         double googleStk = 250.00;
+        double ttlChange = 0;
+        double ttlStk = 0;
+
         StkPortfolio google;
 
         public override double RandStkVal(double minPerc, double maxPerc)
@@ -26,11 +31,11 @@ namespace SampleFIP
             percent = Math.Round(percent, 2);
             return percent;
         }
-        public override int RandVal(int minPerc, int maxPerc)
+        public override int RandVal()
         {
             int sign;
             Random random = new Random();
-            int signPercent = random.Next() * (maxPerc - minPerc) + minPerc;
+            int signPercent = random.Next(0, 2);
             if (signPercent == 0)
             {
                 sign = -1;
@@ -39,35 +44,41 @@ namespace SampleFIP
                 sign = 1;
             return sign;
         }
-        public override double[] ShowDayChange(double baseStk, double percChange, int sign)
+        public override double[] ShowDayChange(double baseStk)
         {
             google = new Google();
             double amntChange;
             double dayChange;
-            baseStk = google.CurrStockVal(googleStk);
-            percChange = google.RandStkVal(.01, .05);
-            sign = google.RandVal(0, 1);
+            baseStk = google.stkVal();
+            double percChange = google.RandStkVal(.01, .05);
+            double sign = google.RandVal();
             amntChange = baseStk * percChange * sign;
-            dayChange = Math.Round(amntChange + baseStk, 2);
+            dayChange = amntChange + baseStk;
             double[] values = new double[2] { amntChange, dayChange };
             return values;
         }
-        public override double[] ShowTtlChange(double baseStk, double[] dayChange)
+        public override double[] ShowTtlChange(double baseStk)
         {
             google = new Google();
-            baseStk = google.CurrStockVal(googleStk);
-            dayChange = google.ShowDayChange(google.CurrStockVal(googleStk), google.RandStkVal(.01, .05), google.RandVal(0, 1));
-            double currVal = baseStk + dayChange[0];
-            double ttlChange = currVal - baseStk;
-            double ttlStk = baseStk + ttlChange;
+            baseStk = google.stkVal();
+            double[] dayChange = google.ShowDayChange(google.stkVal());
+            double currVal = dayChange[0];
+            ttlChange = currVal + ttlChange;
+            ttlStk = baseStk + ttlChange;
             double[] values = new double[2] { ttlChange, ttlStk };
             return values;
         }
-        public override double CurrStockVal(double currVal)
+        public override string StockName()
         {
-            currVal = googleStk;
-            return currVal;
+            string name = stkName;
+            return name;
         }
+        public override double stkVal()
+        {
+            double baseStk = googleStk;
+            return baseStk;
+        }
+
     }
     //public class Gold : StkPortfolio
     //{

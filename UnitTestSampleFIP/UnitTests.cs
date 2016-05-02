@@ -64,21 +64,21 @@ namespace UnitTestSampleFIP
         {
             StkPortfolio stkPortfolio = new Google();
 
-            stkPortfolio.CurrStockVal(250.00);
+            stkPortfolio.stkVal();
             stkPortfolio.RandStkVal(.01, .05);
-            stkPortfolio.ShowDayChange(250.00, .05, 1);
-            stkPortfolio.ShowTtlChange(250.00, stkPortfolio.ShowDayChange(250.00, .05, 1));
-            Assert.AreEqual(250.00, stkPortfolio.CurrStockVal(250.00));
+            stkPortfolio.ShowDayChange(250.00);
+            stkPortfolio.ShowTtlChange(250.00);
+            Assert.AreEqual(250.00, stkPortfolio.stkVal());
             Assert.IsTrue(stkPortfolio.RandStkVal(.01, .05) <= .05);
             Assert.IsTrue(stkPortfolio.RandStkVal(.01, .05) >= .01);
-            double change = stkPortfolio.ShowDayChange(250.00, .05, 1)[0];
-            double value = stkPortfolio.ShowDayChange(250.00, .05, 1)[1];
+            double change = stkPortfolio.ShowDayChange(250.00)[0];
+            double value = stkPortfolio.ShowDayChange(250.00)[1];
             Assert.IsTrue(change <= 12.50);
             Assert.IsTrue(change >= -12.50);
             Assert.IsTrue(value <= 262.50);
             Assert.IsTrue(value >= 238.50);
-            double ttlChange = stkPortfolio.ShowTtlChange(250.00, stkPortfolio.ShowDayChange(250.00, .05, 1))[0];
-            double ttlValue = stkPortfolio.ShowTtlChange(250.00, stkPortfolio.ShowDayChange(250.00, .05, 1))[1];
+            double ttlChange = stkPortfolio.ShowTtlChange(250.00)[0];
+            double ttlValue = stkPortfolio.ShowTtlChange(250.00)[1];
             Assert.IsTrue(ttlChange <= 12.50);
             Assert.IsTrue(ttlChange >= -12.50);
             Assert.IsTrue(ttlValue <= 262.50);
@@ -88,7 +88,7 @@ namespace UnitTestSampleFIP
         public void TestCurrVal()
         {
             StkPortfolio stkPortfolio = new Google();
-            Assert.AreEqual(250.00, stkPortfolio.CurrStockVal(250.00));
+            Assert.AreEqual(250.00, stkPortfolio.stkVal());
         }
         [TestMethod]
         public void TestRandStkVal()
@@ -102,16 +102,16 @@ namespace UnitTestSampleFIP
         public void TestRandVal()
         {
             StkPortfolio stkPortfolio = new Google();
-            stkPortfolio.RandVal(0, 1);
-            Assert.IsTrue(stkPortfolio.RandVal(0, 1) <= 1);
-            Assert.IsTrue(stkPortfolio.RandVal(0, 1) >= 0);
+            stkPortfolio.RandVal();
+            Assert.IsTrue(stkPortfolio.RandVal() <= 1);
+            Assert.IsTrue(stkPortfolio.RandVal() >= 0);
         }
         [TestMethod]
         public void TestDayChange()
         {
             StkPortfolio stkPortfolio = new Google();
-            double change = stkPortfolio.ShowDayChange(250.00, .05, 1)[0];
-            double value = stkPortfolio.ShowDayChange(250.00, .05, 1)[1];
+            double change = stkPortfolio.ShowDayChange(250.00)[0];
+            double value = stkPortfolio.ShowDayChange(250.00)[1];
             Assert.IsTrue(change <= 12.50);
             Assert.IsTrue(change >= -12.50);
             Assert.IsTrue(value <= 262.50);
@@ -122,8 +122,8 @@ namespace UnitTestSampleFIP
         {
            
             StkPortfolio stkPortfolio = new Google();
-            double ttlChange = stkPortfolio.ShowTtlChange(250.00, stkPortfolio.ShowDayChange(250.00, .05, 1))[0];
-            double ttlValue = stkPortfolio.ShowTtlChange(250.00, stkPortfolio.ShowDayChange(250.00, .05, 1))[1];
+            double ttlChange = stkPortfolio.ShowTtlChange(250.00)[0];
+            double ttlValue = stkPortfolio.ShowTtlChange(250.00)[1];
             Assert.IsTrue(ttlChange <= 12.50);
             Assert.IsTrue(ttlChange >= -12.50);
             Assert.IsTrue(ttlValue <= 262.50);
