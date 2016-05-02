@@ -55,6 +55,19 @@
             this.DayChng_Label = new System.Windows.Forms.Label();
             this.InvAmnt_Label = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.FinEmp401k_Label = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.RetRate401k_TB = new System.Windows.Forms.TextBox();
+            this.EmpMatch_TB = new System.Windows.Forms.TextBox();
+            this.Years401k_TB = new System.Windows.Forms.TextBox();
+            this.CurrBall401k_TB = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.FinNoEmp401k_Label = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AnnCont_Label = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.TtlLISA_Label = new System.Windows.Forms.Label();
             this.PercRet_TB = new System.Windows.Forms.TextBox();
@@ -63,19 +76,6 @@
             this.Years_Label = new System.Windows.Forms.Label();
             this.PercRet_Label = new System.Windows.Forms.Label();
             this.SavDept_Label = new System.Windows.Forms.Label();
-            this.AnnCont_Label = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.FinNoEmp401k_Label = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.CurrBall401k_TB = new System.Windows.Forms.TextBox();
-            this.Years401k_TB = new System.Windows.Forms.TextBox();
-            this.EmpMatch_TB = new System.Windows.Forms.TextBox();
-            this.RetRate401k_TB = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.FinEmp401k_Label = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -206,7 +206,7 @@
             this.Salary_TB.Name = "Salary_TB";
             this.Salary_TB.Size = new System.Drawing.Size(100, 20);
             this.Salary_TB.TabIndex = 36;
-            this.Salary_TB.Text = "10000";
+            this.Salary_TB.Text = "100000";
             // 
             // AvailBal_TB
             // 
@@ -214,7 +214,7 @@
             this.AvailBal_TB.Name = "AvailBal_TB";
             this.AvailBal_TB.Size = new System.Drawing.Size(100, 20);
             this.AvailBal_TB.TabIndex = 35;
-            this.AvailBal_TB.Text = "1000";
+            this.AvailBal_TB.Text = "10000";
             // 
             // label4
             // 
@@ -366,6 +366,119 @@
             this.tabPage2.Text = "401k";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // FinEmp401k_Label
+            // 
+            this.FinEmp401k_Label.AutoSize = true;
+            this.FinEmp401k_Label.Location = new System.Drawing.Point(35, 270);
+            this.FinEmp401k_Label.Name = "FinEmp401k_Label";
+            this.FinEmp401k_Label.Size = new System.Drawing.Size(94, 13);
+            this.FinEmp401k_Label.TabIndex = 12;
+            this.FinEmp401k_Label.Text = "Final w/ Employer:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(41, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(342, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Calculate 401k";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // RetRate401k_TB
+            // 
+            this.RetRate401k_TB.Location = new System.Drawing.Point(335, 174);
+            this.RetRate401k_TB.Name = "RetRate401k_TB";
+            this.RetRate401k_TB.Size = new System.Drawing.Size(100, 20);
+            this.RetRate401k_TB.TabIndex = 9;
+            this.RetRate401k_TB.Text = ".07";
+            // 
+            // EmpMatch_TB
+            // 
+            this.EmpMatch_TB.Location = new System.Drawing.Point(127, 174);
+            this.EmpMatch_TB.Name = "EmpMatch_TB";
+            this.EmpMatch_TB.Size = new System.Drawing.Size(100, 20);
+            this.EmpMatch_TB.TabIndex = 8;
+            this.EmpMatch_TB.Text = ".50";
+            // 
+            // Years401k_TB
+            // 
+            this.Years401k_TB.Location = new System.Drawing.Point(335, 92);
+            this.Years401k_TB.Name = "Years401k_TB";
+            this.Years401k_TB.Size = new System.Drawing.Size(100, 20);
+            this.Years401k_TB.TabIndex = 7;
+            this.Years401k_TB.Text = "45";
+            // 
+            // CurrBall401k_TB
+            // 
+            this.CurrBall401k_TB.Location = new System.Drawing.Point(335, 29);
+            this.CurrBall401k_TB.Name = "CurrBall401k_TB";
+            this.CurrBall401k_TB.Size = new System.Drawing.Size(100, 20);
+            this.CurrBall401k_TB.TabIndex = 6;
+            this.CurrBall401k_TB.Text = "1000";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(261, 177);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Return Rate:";
+            // 
+            // FinNoEmp401k_Label
+            // 
+            this.FinNoEmp401k_Label.AutoSize = true;
+            this.FinNoEmp401k_Label.Location = new System.Drawing.Point(35, 229);
+            this.FinNoEmp401k_Label.Name = "FinNoEmp401k_Label";
+            this.FinNoEmp401k_Label.Size = new System.Drawing.Size(109, 13);
+            this.FinNoEmp401k_Label.TabIndex = 4;
+            this.FinNoEmp401k_Label.Text = "Final w/out Employer:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(292, 95);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Years:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(35, 177);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Employer Match:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(243, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Current Balance:";
+            // 
+            // AnnCont_Label
+            // 
+            this.AnnCont_Label.AutoSize = true;
+            this.AnnCont_Label.Location = new System.Drawing.Point(35, 32);
+            this.AnnCont_Label.Name = "AnnCont_Label";
+            this.AnnCont_Label.Size = new System.Drawing.Size(102, 13);
+            this.AnnCont_Label.TabIndex = 0;
+            this.AnnCont_Label.Text = "Annual Contribution:";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.TtlLISA_Label);
@@ -442,119 +555,6 @@
             this.SavDept_Label.Size = new System.Drawing.Size(130, 13);
             this.SavDept_Label.TabIndex = 0;
             this.SavDept_Label.Text = "Savings Deposit Annually:";
-            // 
-            // AnnCont_Label
-            // 
-            this.AnnCont_Label.AutoSize = true;
-            this.AnnCont_Label.Location = new System.Drawing.Point(35, 32);
-            this.AnnCont_Label.Name = "AnnCont_Label";
-            this.AnnCont_Label.Size = new System.Drawing.Size(102, 13);
-            this.AnnCont_Label.TabIndex = 0;
-            this.AnnCont_Label.Text = "Annual Contribution:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(243, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Current Balance:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Employer Match:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(292, 95);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Years:";
-            // 
-            // FinNoEmp401k_Label
-            // 
-            this.FinNoEmp401k_Label.AutoSize = true;
-            this.FinNoEmp401k_Label.Location = new System.Drawing.Point(35, 229);
-            this.FinNoEmp401k_Label.Name = "FinNoEmp401k_Label";
-            this.FinNoEmp401k_Label.Size = new System.Drawing.Size(109, 13);
-            this.FinNoEmp401k_Label.TabIndex = 4;
-            this.FinNoEmp401k_Label.Text = "Final w/out Employer:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(261, 177);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Return Rate:";
-            // 
-            // CurrBall401k_TB
-            // 
-            this.CurrBall401k_TB.Location = new System.Drawing.Point(335, 29);
-            this.CurrBall401k_TB.Name = "CurrBall401k_TB";
-            this.CurrBall401k_TB.Size = new System.Drawing.Size(100, 20);
-            this.CurrBall401k_TB.TabIndex = 6;
-            this.CurrBall401k_TB.Text = "1000";
-            // 
-            // Years401k_TB
-            // 
-            this.Years401k_TB.Location = new System.Drawing.Point(335, 92);
-            this.Years401k_TB.Name = "Years401k_TB";
-            this.Years401k_TB.Size = new System.Drawing.Size(100, 20);
-            this.Years401k_TB.TabIndex = 7;
-            this.Years401k_TB.Text = "45";
-            // 
-            // EmpMatch_TB
-            // 
-            this.EmpMatch_TB.Location = new System.Drawing.Point(127, 174);
-            this.EmpMatch_TB.Name = "EmpMatch_TB";
-            this.EmpMatch_TB.Size = new System.Drawing.Size(100, 20);
-            this.EmpMatch_TB.TabIndex = 8;
-            this.EmpMatch_TB.Text = ".50";
-            // 
-            // RetRate401k_TB
-            // 
-            this.RetRate401k_TB.Location = new System.Drawing.Point(335, 174);
-            this.RetRate401k_TB.Name = "RetRate401k_TB";
-            this.RetRate401k_TB.Size = new System.Drawing.Size(100, 20);
-            this.RetRate401k_TB.TabIndex = 9;
-            this.RetRate401k_TB.Text = ".07";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(342, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Calculate 401k";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 270);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 11;
-            // 
-            // FinEmp401k_Label
-            // 
-            this.FinEmp401k_Label.AutoSize = true;
-            this.FinEmp401k_Label.Location = new System.Drawing.Point(35, 270);
-            this.FinEmp401k_Label.Name = "FinEmp401k_Label";
-            this.FinEmp401k_Label.Size = new System.Drawing.Size(94, 13);
-            this.FinEmp401k_Label.TabIndex = 12;
-            this.FinEmp401k_Label.Text = "Final w/ Employer:";
             // 
             // Invest_Form
             // 
