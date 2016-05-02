@@ -30,13 +30,15 @@ namespace SampleFIP
         private void CrtPtflio_Btn_Click_1(object sender, EventArgs e)
         {
             tabControl1.SelectTab(tabPage1);
-            InvAmnt_Label.Text = InvAmnt_Label.Text + getPercAmnt()[0];
-            stkName_label.Text = stkName_label.Text + stkPortfolio.StockName();
-            initStkVal_Lbl.Text = initStkVal_Lbl.Text + stkPortfolio.stkVal();
-            TtlAmnt_Label.Text = TtlAmnt_Label.Text + getPercAmnt()[0];
-            ttlStkVal_Lbl.Text = ttlStkVal_Lbl.Text + stkPortfolio.stkVal();
+            InvAmnt_Label.Text = "IP Amount: " + getPercAmnt()[0];
+            stkName_label.Text = "Stock: " + stkPortfolio.StockName();
+            initStkVal_Lbl.Text = "Initial Stock Value: " + stkPortfolio.stkVal();
+            TtlAmnt_Label.Text = "Total Amount: "+ getPercAmnt()[0];
+            ttlStkVal_Lbl.Text = "Total Stock: "+ stkPortfolio.stkVal();
             double yearlyCont = getPercAmnt()[2];
-            SavDept_Label.Text = SavDept_Label.Text + yearlyCont;
+            SavDept_Label.Text = "Savings Deposit Annually: " + yearlyCont;
+            double AnnualCont = getPercAmnt()[1];
+            AnnCont_Label.Text = "Annual Contribution: " + AnnualCont;
         }
 
         private double[] getPercAmnt()
@@ -80,19 +82,50 @@ namespace SampleFIP
         }
         private void LISA()
         {
-            double SavDept = getPercAmnt()[2];
+            double SavDeptAnn = getPercAmnt()[2];
             int years = Convert.ToInt32(Years_TB.Text);
             years = int.Parse(Years_TB.Text);
             double percReturn = Convert.ToDouble(PercRet_TB.Text);
             percReturn = double.Parse(PercRet_TB.Text);
-            double finalAmnt = SavDept * Math.Pow((1 + percReturn), years);
+            double CmpndInt = SavDeptAnn * Math.Pow((1 + percReturn), years);
+            CmpndInt = Math.Round(CmpndInt, 2);
+            double AnnDepVal = SavDeptAnn * (Math.Pow((1 + percReturn), years) - 1) / percReturn;
+            double finalAmnt = CmpndInt + AnnDepVal;
             finalAmnt = Math.Round(finalAmnt, 2);
             TtlLISA_Label.Text = "Total Amount: " + finalAmnt;
         }
-
+        
         private void CalcSavs_Btn_Click(object sender, EventArgs e)
         {
             LISA();
+        }
+        private void _401k()
+        {
+            double currBalance = Convert.ToDouble(CurrBall401k_TB.Text);
+            currBalance = double.Parse(CurrBall401k_TB.Text);
+            double AnnualCont = getPercAmnt()[1];
+            double EmployerCont = Convert.ToDouble(EmpMatch_TB.Text);
+            EmployerCont = double.Parse(EmpMatch_TB.Text);
+            int years = Convert.ToInt32(Years401k_TB.Text);
+            years = int.Parse(Years401k_TB.Text);
+            double annContEmp = AnnualCont + (AnnualCont * EmployerCont);
+            double RetRate = Convert.ToDouble(RetRate401k_TB.Text);
+            RetRate = double.Parse(RetRate401k_TB.Text);
+            double CmpndInt = (currBalance) * Math.Pow((1 + RetRate), years);
+            CmpndInt = Math.Round(CmpndInt, 2);
+            double AnnDepVal = AnnualCont * (Math.Pow((1 + RetRate), years) - 1) / RetRate;
+            double finalAmntNoEmp = CmpndInt + AnnDepVal;
+            double AnnDepValEmp = annContEmp * (Math.Pow((1 + RetRate), years) - 1) / RetRate;
+            double finalAmntEmp = CmpndInt + AnnDepValEmp;
+            finalAmntEmp = Math.Round(finalAmntEmp, 2);
+            finalAmntNoEmp = Math.Round(finalAmntNoEmp, 2);
+            FinNoEmp401k_Label.Text = "Final w/out Employer: " + finalAmntNoEmp;
+            FinEmp401k_Label.Text = "Final w/ Employer: " + finalAmntEmp;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _401k();
         }
     }
 }
